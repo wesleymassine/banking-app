@@ -3,6 +3,7 @@
     padding: 30px;
     background: #dcbc81;
     color: #fff;
+    box-shadow: 0 2px 5px -2px grey;
 }
 
 .menu-header li  {

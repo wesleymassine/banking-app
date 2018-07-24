@@ -1,14 +1,26 @@
 .wrapper-content {
     width: 100vw;
     height: 70vh;
-    transform: skewY(-2deg);
     z-index: -9999;
-    position: relative;
     top: -60px;
 }
 
-.bg_img{
-	position: fixed; 
+.box-tile {
+    width: 40vw;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    padding: 10px;
+}
+
+.wrapper-content h1 {
+	font-size: 60pt;
+	color: #fff;
+	text-shadow: 2px 2px #333;
+}
+
+.bg_alpha {
 	right: 0; 
 	bottom: 0;
 	min-width: 100%; 
@@ -16,6 +28,19 @@
 	width: auto; 
 	height: auto; 
 	z-index: -1000;
-	background: url('../../assets/images/bg_banking.jpg') no-repeat;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.9;
+	background-size: cover; 
+}
+
+.bg_img{
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -1000;
+	background: url('https://github.com/daniloagostinho/traning-book/blob/master/src/assets/images/bg_banking.jpg?raw=true') no-repeat;
 	background-size: cover; 
 }
