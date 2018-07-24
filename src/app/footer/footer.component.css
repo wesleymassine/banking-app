@@ -15,3 +15,12 @@
     list-style: none;
     line-height: 3;
 }
+
+.rodape {
+    background: #ddd;
+    height: 5vh;
+}
+
+.rodape p {
+    padding-top: 6px;
+}
