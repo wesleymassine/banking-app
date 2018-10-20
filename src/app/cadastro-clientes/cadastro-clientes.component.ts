@@ -20,6 +20,15 @@ export class CadastroClientesComponent implements OnInit {
       telefone: [''],
       endereco: ['']
     });
+    setTimeout(() => {
+      this.formCadastro.patchValue({
+        nome: 'Danilo Agostinho',
+        cpf: '03357064362',
+        email: 'danilodev.silva@gmail.com',
+        telefone: '11974031503',
+        endereco: 'Rua begonia'
+      });
+    }, 2000);
     console.log(this.valoresForm);
     this.formCadastro.valueChanges.pipe(
       debounceTime(1000))
@@ -29,9 +38,8 @@ export class CadastroClientesComponent implements OnInit {
       });
   }
   cadastro() {
-    console.log(this.formCadastro.controls);
-    console.log('Objeto >>>>> ', this.valoresForm);
     this.conversao = JSON.stringify(this.valoresForm);
+    console.log(this.conversao);
     localStorage.setItem('cadastro', this.conversao);
   }
 

@@ -10,13 +10,15 @@ import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeLogadaComponent } from './home-logada/home-logada.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContentComponent,
     FooterComponent,
-    CadastroClientesComponent
+    CadastroClientesComponent,
+    HomeLogadaComponent
   ],
   imports: [
     BrowserModule,
