@@ -15,11 +15,17 @@
               <label class="form-check-label">
                 <b>Acesse</b> sua conta
               </label>
-              <input type="text" class="form-control" placeholder="Digite seu CPF">
+              <input 
+              type="text" 
+              class="form-control"
+              formControlName="cpf"
+              placeholder="Digite seu CPF"
+              (keypress)="onlynumber($event)"
+              maxlength=11>
             </div>
           </div>
           <div class="col-auto my-1">
-            <button type="submit" class="btn btn-primary acessar-conta">Acessar</button>
+            <button type="submit" class="btn btn-primary acessar-conta" (click)="login()">Acessar</button>
           </div>
         </div>
       </form>

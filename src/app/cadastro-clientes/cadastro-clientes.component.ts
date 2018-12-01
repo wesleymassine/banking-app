@@ -18,6 +18,7 @@ export class CadastroClientesComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    localStorage.clear();
     this.formCadastro = this.fb.group({
       nome: [''],
       cpf: [''],
@@ -25,15 +26,6 @@ export class CadastroClientesComponent implements OnInit {
       telefone: [''],
       endereco: ['']
     });
-    setTimeout(() => {
-      this.formCadastro.patchValue({
-        nome: 'Danilo Agostinho',
-        cpf: '03357064362',
-        email: 'danilodev.silva@gmail.com',
-        telefone: '11974031503',
-        endereco: 'Rua begonia'
-      });
-    }, 2000);
     console.log(this.valoresForm);
     this.formCadastro.valueChanges.pipe(
       debounceTime(1000))

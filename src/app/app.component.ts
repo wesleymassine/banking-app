@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, Input } from '@angular/core';
 import {MatDialog} from '@angular/material';
 
 
@@ -7,14 +7,12 @@ import {MatDialog} from '@angular/material';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'app';
-
 
   constructor(public dialog: MatDialog) {
 
   }
-
   openDialog() {
     const dialogRef = this.dialog.open(AppComponent, {
       height: '350px'
