@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeLogadaComponent } from './home-logada/home-logada.component';
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,8 @@ import { HomeLogadaComponent } from './home-logada/home-logada.component';
     ContentComponent,
     FooterComponent,
     CadastroClientesComponent,
-    HomeLogadaComponent
+    HomeLogadaComponent,
+    CadastroConcluidoComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import { HomeLogadaComponent } from './home-logada/home-logada.component';
     ReactiveFormsModule
   ],
   providers: [],
+  entryComponents: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
