@@ -5,11 +5,11 @@
         <h3>Conta corrente</h3>
         <p>Dados da conta</p>
         <ul>
-          <li>Nome: Danilo Silva</li>
-          <li>Email: danilodev.silva@gmail.com</li>
-          <li>Senha: 09101</li>
+          <li>Agencia: 089898</li>
+          <li>Conta: 09090900-5</li>
         </ul>
-        <p>Saldo disponível <b>R$ 3,65</b></p>
+        <p>Saldo disponível <b>R$ {{saldoCliente}}</b></p>
+        <p class="text-center"><b>Adicionar valor a conta</b></p>
       </mat-card>
     </div>
     <div class="col-sm">
@@ -17,9 +17,9 @@
         <h3>Cartão de crédito</h3>
         <p>Consulte as ofertas</p>
         <ul>
-          <li>Limte <b>R$ 2.500</b></li>
-          <li>Saldo parcial <b>R$ 684,00</b></li>
-          <li>Valor parcela: <b>R$ 250,00</b></li>
+          <li>Limte <b>R$ {{limeteCliente}}</b></li>
+          <li>Saldo parcial <b>R$ {{saldoParcial}}</b></li>
+          <li>Valor parcela: <b>R$ {{valorParcela}}</b></li>
         </ul>
       </mat-card>
     </div>
@@ -30,7 +30,8 @@
         <i class="material-icons logo-investimentos">
           monetization_on
         </i>
-        <h4 class="text-center"><b>R$ 3.450,00</b></h4>
+        <h4 class="text-center"><b>R$ {{saldoBruto}}</b></h4>
+        <p class="text-center"><b>Investir</b></p>
       </mat-card>
     </div>
   </div>
@@ -48,7 +49,8 @@
         <i class="material-icons poupanca-logo">
           redeem
         </i>
-        <p class="text-center">Investir agora</p>
+        <h4 class="text-center"><b>R$ {{saldoPoupanca}}</b></h4>
+        <p class="text-center">Guardar dinheiro</p>
       </mat-card>
     </div>
     <div class="col-sm">
@@ -65,8 +67,8 @@
             Pagamentos
           </div>
           <div class="col-sm">
-              Utilidades
-            </div>
+            Utilidades
+          </div>
         </div>
       </mat-card>
     </div>
