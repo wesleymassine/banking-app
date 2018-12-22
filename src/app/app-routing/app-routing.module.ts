@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'cadastro-clientes', component: CadastroClientesComponent }
 ];
 
-
 @NgModule({
   imports: [
     CommonModule,
