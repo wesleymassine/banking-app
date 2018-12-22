@@ -16,8 +16,9 @@ import { AuthGuard } from 'auth.guard';
 import { AuthService } from 'auth.service';
 import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
 import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
+import { SingletonRouterService } from 'src/services/singletonRouter.service';
 
-
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +36,10 @@ import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadast
     BrowserAnimationsModule,
     MatDialogModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [AuthGuard, AuthService, SingletonRouterService],
   entryComponents: [ModalNotCadastroComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

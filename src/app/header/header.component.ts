@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { ModalNotCadastroComponent } from '../modal-not-cadastro/modal-not-cadastro.component';
+import { SingletonRouterService } from 'src/services/singletonRouter.service';
 
 @Component({
   selector: 'app-header',
@@ -17,14 +18,17 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   keys;
   getCadastro;
   message;
-  constructor(private fb: FormBuilder, private router: Router, public dialog: MatDialog) { }
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    public dialog: MatDialog,
+    private singletonService: SingletonRouterService) { }
   @ViewChild('hello') helloTemplate;
   ngAfterViewInit() {
     console.log(this.helloTemplate);
   }
 
   ngOnInit() {
-    console.log('Component app-header inciado...');
     this.formLogin = this.fb.group({
       cpf: ['']
     });
