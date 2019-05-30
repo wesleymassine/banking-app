@@ -18,6 +18,7 @@ export class CadastroClientesComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    // this.formCadastro
     localStorage.clear();
     this.formCadastro = this.fb.group({
       nome: [''],
@@ -27,6 +28,15 @@ export class CadastroClientesComponent implements OnInit {
       endereco: ['']
     });
     console.log(this.valoresForm);
+    setTimeout(() => {
+      this.formCadastro.patchValue({
+        'nome': 'Nicolas Daniel Victor da Conceição',
+        'cpf': '16938868719',
+        'email': 'nnicolasdanielvictordaconceicao@lubeka.com.br',
+        'telefone': '(94) 3565-6035',
+        'endereco': 'Quadra Quatro',
+        });
+    }, 2000);
     this.formCadastro.valueChanges.pipe(
       debounceTime(1000))
       .subscribe(res => {

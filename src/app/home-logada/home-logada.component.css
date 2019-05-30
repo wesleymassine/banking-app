@@ -18,3 +18,6 @@ b {
     position: relative;
     left: 110px; 
 }
+.custom-height {
+    height: 50vh;
+}

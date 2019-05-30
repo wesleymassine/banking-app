@@ -19,7 +19,6 @@ export class AppComponent implements OnInit  {
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
     this.isShow = this.singletonService.getCredentials();
-    console.log(this.isShow);
   }
   openDialog() {
     const dialogRef = this.dialog.open(AppComponent, {

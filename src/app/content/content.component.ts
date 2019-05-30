@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 export class ContentComponent implements OnInit {
 
   constructor(private router: Router) { }
-
   ngOnInit() {
     const options = {
       stringsElement: '#typed-strings',
@@ -26,6 +25,7 @@ export class ContentComponent implements OnInit {
     };
 
     const typed = new Typed('.typing-element', options);
+    // localStorage.removeItem('cadastro');
   }
 
   gotoCadastroClientes() {

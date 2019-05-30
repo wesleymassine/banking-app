@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
@@ -10,7 +10,7 @@ import { SingletonRouterService } from 'src/services/singletonRouter.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements OnInit {
   formLogin;
   theEvent;
   key;
@@ -21,12 +21,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    public dialog: MatDialog,
-    private singletonService: SingletonRouterService) { }
-  @ViewChild('hello') helloTemplate;
-  ngAfterViewInit() {
-    console.log(this.helloTemplate);
-  }
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.formLogin = this.fb.group({
@@ -50,9 +45,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
     const cpfPersistido = this.getCadastro['cpf'];
     const cpfDigitado = this.formLogin.get('cpf').value;
-
-    console.log('cpfPersistido >>>>>>> ', cpfPersistido);
-    console.log('cpfDigitado >>>>>>> ', cpfDigitado);
     if (cpfPersistido === cpfDigitado) {
       this.router.navigate(['home-logada']);
     } else {
