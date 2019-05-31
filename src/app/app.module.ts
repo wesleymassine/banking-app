@@ -11,6 +11,15 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeLogadaComponent } from './home-logada/home-logada.component';
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
+import { AuthGuard } from 'auth.guard';
+import { AuthService } from 'auth.service';
+import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
+import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadastro.component';
+import { SingletonRouterService } from 'src/services/singletonRouter.service';
+
+import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,16 +27,22 @@ import { HomeLogadaComponent } from './home-logada/home-logada.component';
     ContentComponent,
     FooterComponent,
     CadastroClientesComponent,
-    HomeLogadaComponent
+    HomeLogadaComponent,
+    CadastroConcluidoComponent,
+    AcessoNegadoComponent,
+    ModalNotCadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatDialogModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService, SingletonRouterService],
+  entryComponents: [ModalNotCadastroComponent],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
