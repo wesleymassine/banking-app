@@ -27,7 +27,7 @@ export class CadastroClientesComponent implements OnInit {
       telefone: [''],
       endereco: ['']
     });
-    // console.log(this.valoresForm);
+    console.log(this.valoresForm);
     // setTimeout(() => {
     //   this.formCadastro.patchValue({
     //     'nome': 'Nicolas Daniel Victor da Conceição',
