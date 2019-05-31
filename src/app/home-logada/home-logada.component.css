@@ -21,3 +21,10 @@ b {
 .custom-height {
     height: 50vh;
 }
+.area-logada {
+    height: 15vh;
+    padding: 30px;
+    background: #dcbc81;
+    color: #fff;
+    box-shadow: 0 2px 5px -2px grey;
+}

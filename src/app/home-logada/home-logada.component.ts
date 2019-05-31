@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-home-logada',
   templateUrl: './home-logada.component.html',
@@ -14,9 +14,10 @@ export class HomeLogadaComponent implements OnInit {
   // saldoPoupanca;
   getCadastro;
   nameCliente;
-  constructor() { }
+  constructor(private el: ElementRef) { }
 
   ngOnInit() {
+    console.log(this.el.nativeElement);
     // this.statusCliente = [
     //   {
     //     saldo: '0,00',

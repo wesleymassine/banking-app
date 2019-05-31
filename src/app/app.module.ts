@@ -19,6 +19,7 @@ import { ModalNotCadastroComponent } from './modal-not-cadastro/modal-not-cadast
 import { SingletonRouterService } from 'src/services/singletonRouter.service';
 
 import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import {MatCardModule} from '@angular/material/card';
     HomeLogadaComponent,
     CadastroConcluidoComponent,
     AcessoNegadoComponent,
-    ModalNotCadastroComponent
+    ModalNotCadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
