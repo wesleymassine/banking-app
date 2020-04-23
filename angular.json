@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "traning-bank"
+  "defaultProject": "traning-bank",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,5 +1,5 @@
 mat-card {
-    height: 300px;
+    height: auto;
     background-color: #dcbc81f5;
 }
 h3,
@@ -19,7 +19,7 @@ b {
     left: 110px; 
 }
 .custom-height {
-    height: 50vh;
+    height: 100vh;
 }
 .area-logada {
     height: 15vh;

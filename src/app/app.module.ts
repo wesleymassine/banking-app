@@ -20,6 +20,8 @@ import { SingletonRouterService } from 'src/services/singletonRouter.service';
 
 import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import { PainelInvestirComponent } from './painel-investir/painel-investir.component';
+import { InvestirComponent } from './investir/investir.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,9 @@ import { LoginComponent } from './login/login.component';
     CadastroConcluidoComponent,
     AcessoNegadoComponent,
     ModalNotCadastroComponent,
-    LoginComponent
+    LoginComponent,
+    PainelInvestirComponent,
+    InvestirComponent
   ],
   imports: [
     BrowserModule,

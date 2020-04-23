@@ -8,6 +8,8 @@ import { HomeLogadaComponent } from '../home-logada/home-logada.component';
 import { AuthGuard } from 'auth.guard';
 import { AcessoNegadoComponent } from '../acesso-negado/acesso-negado.component';
 import { LoginComponent } from '../login/login.component';
+import { PainelInvestirComponent } from '../painel-investir/painel-investir.component';
+import { InvestirComponent } from '../investir/investir.component';
 
 const routes: Routes = [
   { path: '', component: ContentComponent },
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'home-logada', component: HomeLogadaComponent, canActivate: [AuthGuard] },
   { path: 'acesso-negado', component: AcessoNegadoComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'painel-investir', component: PainelInvestirComponent},
+  { path: 'investimentos', component: InvestirComponent},
 ];
 
 @NgModule({
